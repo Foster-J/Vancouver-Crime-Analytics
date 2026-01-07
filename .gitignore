@@ -1,0 +1,203 @@
+# Vancouver Crime Analytics - .gitignore
+
+# ============================================================================
+# DATA FILES - Don't commit large datasets
+# ============================================================================
+# Raw data files (too large for GitHub)
+data/raw/*.csv
+data/raw/*.xlsx
+data/raw/*.json
+
+# Processed data files
+data/processed/*.csv
+data/processed/*.parquet
+
+# Keep the folder structure but not the files
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/reference/.gitkeep
+
+# ============================================================================
+# DATABASE FILES
+# ============================================================================
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+database/*.db
+
+# Database backups
+*.db-journal
+*.db-wal
+*.db-shm
+
+# ============================================================================
+# PYTHON
+# ============================================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IPython
+profile_default/
+ipython_config.py
+
+# PyCharm
+.idea/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ============================================================================
+# POWERBI
+# ============================================================================
+# PowerBI temporary files
+*.pbix.tmp
+*.pbit.tmp
+
+# Note: You may want to commit your .pbix file if it's small enough
+# Comment out the line below if you want to include it:
+# powerbi/*.pbix
+
+# ============================================================================
+# VS CODE
+# ============================================================================
+.vscode/
+*.code-workspace
+
+# Local settings
+.vscode/settings.json
+.vscode/launch.json
+
+# ============================================================================
+# CONFIGURATION & SECRETS
+# ============================================================================
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+*.env
+
+# Configuration files with sensitive data
+config.local.yaml
+secrets.yaml
+credentials.json
+
+# API keys
+*api_key*
+*apikey*
+
+# ============================================================================
+# OUTPUT FILES
+# ============================================================================
+# Generated reports
+outputs/reports/*.pdf
+outputs/reports/*.docx
+outputs/reports/*.html
+
+# Generated figures (optional - you may want to commit these)
+# outputs/figures/*.png
+# outputs/figures/*.jpg
+
+# Logs
+*.log
+logs/
+
+# ============================================================================
+# OPERATING SYSTEM
+# ============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ============================================================================
+# TEMPORARY FILES
+# ============================================================================
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# ============================================================================
+# DOCUMENTATION (OPTIONAL)
+# ============================================================================
+# Uncomment if you have large documentation that shouldn't be in repo
+# docs/*.pdf
+# docs/*.docx
+
+# ============================================================================
+# CUSTOM - PROJECT SPECIFIC
+# ============================================================================
+# Add any project-specific files here
+# Example: test datasets, experimental notebooks, etc.
+notebooks/scratch/
+notebooks/experimental/
+test_data/
+
+# Old versions / backups
+*_old.*
+*_backup.*
+*.backup
